@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TierUp — Pricing</title>
+  <meta name="description" content="Pricing page for TierUp, a fictional uptime-monitoring SaaS. Built with Flexbox.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <p class="brand"><span class="brand-dot" aria-hidden="true"></span> TierUp</p>
+    <p class="tagline">Uptime monitoring that pages the right person, not the whole team.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Simple pricing that grows with you</h1>
+      <p>Start free. Upgrade when your status page gets famous.</p>
+
+      <div class="switches">
+        <div class="billing" role="group" aria-label="Billing period">
+          <span id="monthly-label">Monthly</span>
+          <button type="button" class="switch" role="switch" aria-checked="false" aria-labelledby="monthly-label annual-label">
+            <span class="knob"></span>
+          </button>
+          <span id="annual-label">Annual <em class="save-badge">2 months free</em></span>
+        </div>
+        <label class="currency">
+          <span class="visually-hidden">Currency</span>
+          <select id="currency">
+            <option value="INR">₹ INR</option>
+            <option value="USD">$ USD</option>
+            <option value="EUR">€ EUR</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="plans" aria-label="Plans"></section>
+
+    <section class="compare">
+      <h2>Compare every feature</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Feature</th><th scope="col">Hobby</th><th scope="col">Team</th><th scope="col">Scale</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Monitors</th><td>5</td><td>50</td><td>Unlimited</td></tr>
+            <tr><th scope="row">Check interval</th><td>5 min</td><td>30 sec</td><td>10 sec</td></tr>
+            <tr><th scope="row">Status pages</th><td>1</td><td>5</td><td>Unlimited</td></tr>
+            <tr><th scope="row">On-call rotations</th><td>—</td><td>✓</td><td>✓</td></tr>
+            <tr><th scope="row">SMS &amp; voice alerts</th><td>—</td><td>100 / mo</td><td>Unlimited</td></tr>
+            <tr><th scope="row">SSO / SAML</th><td>—</td><td>—</td><td>✓</td></tr>
+            <tr><th scope="row">Data retention</th><td>7 days</td><td>90 days</td><td>2 years</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Questions</h2>
+      <details>
+        <summary>Can I switch plans later?</summary>
+        <p>Yes. Upgrades take effect immediately and are prorated. Downgrades apply at the end of your billing cycle.</p>
+      </details>
+      <details>
+        <summary>What counts as a monitor?</summary>
+        <p>One URL, port or heartbeat endpoint that we check on a schedule. Multi-region checks of the same URL count once.</p>
+      </details>
+      <details>
+        <summary>Is there a discount for students and open-source projects?</summary>
+        <p>Team is free for verified students and for OSS projects with 100+ stars. Just ask.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">TierUp is a fictional product. Page designed &amp; built by <a href="https://github.com/himanshuuem">Himanshu</a>. Exchange rates are illustrative.</footer>
+
+  <template id="plan-template">
+    <article class="plan">
+      <p class="ribbon" hidden>Most popular</p>
+      <h3 class="plan-name"></h3>
+      <p class="plan-blurb"></p>
+      <p class="price"><span class="amount"></span><span class="period"></span></p>
+      <p class="billed"></p>
+      <ul class="perks"></ul>
+      <a class="cta" href="#"></a>
+    </article>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
